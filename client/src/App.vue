@@ -11,7 +11,7 @@ html, body {
   margin: 0;
   height: 100%;
   box-sizing: border-box;
-  background: #f3f0f1;
+  background: var(--background-color);
 
 }
 #planfree {
@@ -19,7 +19,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-color);
   height: 100%;
 }
 
@@ -31,7 +31,7 @@ html, body {
   padding: 30px;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: var(--text-color);
 
     &.router-link-exact-active {
       color: #42b983;

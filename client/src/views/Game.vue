@@ -20,7 +20,7 @@
                 height="24px"
                 viewBox="0 0 24 24"
                 width="24px"
-                fill="#000000"
+                fill="var(--text-color)"
             >
               <path d="M0 0h24v24H0V0z" fill="none"/>
               <path
@@ -57,7 +57,7 @@
           <div></div>
         </button>
         <button class="fib-button" @click="toggleTickets">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="var(--text-color)">
             <path
                 d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h440l200 200v440q0 33-23.5 56.5T760-120H200Zm0-80h560v-400H600v-160H200v560Zm80-80h400v-80H280v80Zm0-320h200v-80H280v80Zm0 160h400v-80H280v80Zm-80-320v160-160 560-560Z"/>
           </svg>
@@ -301,10 +301,10 @@ const toggleTickets = () => showTickets.value = !showTickets.value;
     cursor: default;
     width: 64px;
     height: 80px;
-    background: #f3f0f1;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
-    color: #161b1f;
+    background: var(--background-color);
+    box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+    6px 6px 10px rgba(var(--black), 0.2);
+    color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,26 +338,26 @@ const toggleTickets = () => showTickets.value = !showTickets.value;
   top: 45%;
   width: 320px;
   height: 80px;
-  background: #f3f0f1;
+  background: var(--background-color);
   border-radius: 32px;
   text-align: center;
   border: none;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-  6px 6px 10px rgba(0, 0, 0, 0.2);
-  color: #161b1f;
+  box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+  6px 6px 10px rgba(var(--black), 0.2);
+  color: var(--text-color);
 
   &:hover {
     opacity: 0.3;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+    6px 6px 10px rgba(var(--black), 0.2);
   }
 
   &:active {
     opacity: 1;
-    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: inset -4px -4px 8px rgba(var(--white), 0.5),
+    inset 8px 8px 16px rgba(var(--black), 0.1);
   }
 
 }
@@ -412,7 +412,7 @@ const toggleTickets = () => showTickets.value = !showTickets.value;
       position: relative;
       left: 2px;
       top: 3px;
-      fill: #161b1f;
+      fill: var(--text-color);
     }
   }
 
@@ -421,7 +421,8 @@ const toggleTickets = () => showTickets.value = !showTickets.value;
     user-select: none;
     height: 70px;
     font-size: 26px;
-    background: #f3f0f1;
+    background: var(--background-color);
+    color: var(--text-color);
     border-radius: 32px;
     border: none;
     display: flex;
@@ -447,7 +448,7 @@ const toggleTickets = () => showTickets.value = !showTickets.value;
       height: 2px;
       bottom: 10px;
       right: 10px;
-      background-color: #000;
+      background-color: var(--black);
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
@@ -478,7 +479,7 @@ span {
   font-family: "Montserrat", sans-serif;
   font-size: 26px;
   font-weight: semibold;
-  color: #161b1f;
+  color: var(--text-color);
   user-select: none;
 }
 
@@ -498,14 +499,14 @@ span {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #161b1f;
+    background: var(--text-color);
     border-radius: 26px;
     border: none;
     width: 250px;
     height: 100px;
     transition: all 0.1s ease-in-out;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+    6px 6px 10px rgba(var(--black), 0.2);
 
     user-select: none;
     font-family: "Montserrat", sans-serif;
@@ -537,7 +538,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f3f0f1;
+  background: var(--background-color);
   border-radius: 26px;
   text-align: center;
   border: none;
@@ -545,21 +546,21 @@ span {
   width: 64px;
   height: 70px;
   transition: all 0.1s ease-in-out;
-  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-  6px 6px 10px rgba(0, 0, 0, 0.2);
-  color: #161b1f;
+  box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+  6px 6px 10px rgba(var(--black), 0.2);
+  color: var(--text-color);
 
   &:not(.current) {
     &:hover {
       opacity: 0.3;
-      box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-      6px 6px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+      6px 6px 10px rgba(var(--black), 0.2);
     }
 
     &:active {
       opacity: 1;
-      box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-      inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+      box-shadow: inset -4px -4px 8px rgba(var(--white), 0.5),
+      inset 8px 8px 16px rgba(var(--black), 0.1);
     }
   }
 

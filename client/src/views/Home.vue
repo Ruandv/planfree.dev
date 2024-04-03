@@ -2,6 +2,7 @@
   <div class="home">
     <div class="container">
       <div class="free-poker-header">
+        <ToggleButton @updated="(e)=>{switchTheme()}"/>
         <h1>Scrum poker made simple and <span>free</span>.</h1>
       </div>
       <div class="start-game">
@@ -111,10 +112,14 @@ import router from "@/router";
 import {io} from "socket.io-client";
 import {ref} from 'vue';
 import {useGameEngine} from "@/composables/useGameEngine";
+import ToggleButton from "@/components/ToggleButton.vue";
 const { socket, setSocket  } = useGameEngine();
 const clickedStart = ref(false);
 const hasStarted = ref(false);
-
+function switchTheme() {
+  debugger;
+  document.body.classList.toggle('dark');
+}
 function startGame() {
   clickedStart.value = true;
   setTimeout(() => {
@@ -189,26 +194,26 @@ function startGame() {
   z-index: 9999;
   width: 320px;
   height: 80px;
-  background: #f3f0f1;
+  background: var(--background-color);
   border-radius: 32px;
   text-align: center;
   border: none;
   cursor: pointer;
   transition: all 0.1s ease-in-out;
-  box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-  6px 6px 10px rgba(0, 0, 0, 0.2);
-  color: #161b1f;
+  box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+  6px 6px 10px rgba(var(--black), 0.2);
+  color: var(--text-color);
 
   &:hover {
     opacity: 0.3;
-    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px -6px 10px rgba(var(--white), 0.8),
+    6px 6px 10px rgba(var(--background-color), 0.2);
   }
 
   &:active {
     opacity: 1;
-    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: inset -4px -4px 8px rgba(var(--white), 0.5),
+    inset 8px 8px 16px rgba(var(--black), 0.1);
   }
 
   span {
@@ -220,13 +225,13 @@ function startGame() {
 
 .disabled {
   opacity: 1;
-  box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-  inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset -4px -4px 8px rgba(var(--white), 0.5),
+  inset 8px 8px 16px rgba(var(--black), 0.1);
 
   &:hover {
     opacity: 1;
-    box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
-    inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: inset -4px -4px 8px rgba(var(--white), 0.5),
+    inset 8px 8px 16px rgba(var(--black), 0.1);
   }
 }
 

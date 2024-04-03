@@ -72,7 +72,7 @@ function voteOn(ticket: Ticket) {
   flex-direction: column;
   overflow: auto;
   height: 70%;
-  background: #f3f0f1;
+  background: var(--background-color);
 }
 
 .ticket {

@@ -71,7 +71,7 @@ const completed = () => {
 
 .enter-button {
   //background: #54e8dd;
-  background: white;
+  background: var(--white);
   border: none;
   cursor: pointer;
   border-top-right-radius: 10px;
@@ -89,7 +89,7 @@ input {
   font-size: 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  color: #161b1f;
+  color: var(--text-color);
   padding: 8px 50px 8px 8px;
 }
 

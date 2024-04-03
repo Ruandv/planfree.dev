@@ -52,8 +52,8 @@
   position: absolute;
   border-radius: 15px;
   box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
-    6px 6px 10px rgba(0, 0, 0, 0.2);
-  color: #161b1f;
+    6px 6px 10px rgba(var(--black), 0.2);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
