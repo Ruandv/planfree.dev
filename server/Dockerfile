@@ -18,5 +18,7 @@ WORKDIR /usr/src/app
 # Install dependencies from packages.json
 RUN npm install
 
+EXPOSE 3030
+
 # Command for container to execute
 ENTRYPOINT [ "node", "index.js" ]

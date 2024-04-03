@@ -19,9 +19,10 @@ app.get('/', (req, res) => {
     res.send('<h1>Hello world</h1>');
 });
 
-console.log(process.env.ORIGIN);
+console.log(`CORS Allow : ${process.env.ORIGIN}`);
+
 http.listen(process.env.PORT || 3000, () => {
-    console.log('listening on *:3000');
+    console.log(`listening on *:${process.env.PORT || 3000}`);
 });
 
 
