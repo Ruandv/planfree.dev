@@ -18,6 +18,8 @@
         "free": "free",
         "connection_issue": "Looks like there's a problem connecting you to the server 😕", 
         "settings": "Settings",
-        "units": "Units"
+        "units": "Units",
+        "share_modal_title": "Share this game",
+        "share_modal_subtitle": "Invite your team to join the game"
     }
 }
